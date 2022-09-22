@@ -3,12 +3,6 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 
 export default function Page(props) {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    setUsers(props.users);
-  }, []);
-  console.log(props);
-  // console.log(users);
   return (
     <Layout>
       <div>사용자 목록 페이지</div>
@@ -27,7 +21,6 @@ export default function Page(props) {
   );
 }
 export async function getStaticProps() {
-  console.log("안녕 난 getStaticProps야");
   const res = await axios.get("https://jsonplaceholder.typicode.com/users");
   console.log(res.data);
   return { props: { users: res.data } };
