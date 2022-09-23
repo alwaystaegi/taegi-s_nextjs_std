@@ -45,12 +45,20 @@ export default function NavBar() {
           {/* //!users */}
           <li>
             <Link href="/users">
-              <a>users</a>
+              <a className={router.pathname === "/users" ? " bg-red-200" : ""}>
+                users
+              </a>
             </Link>
           </li>
           <li>
             <Link href="/users/ssr">
-              <a>ssr</a>
+              <a
+                className={
+                  router.pathname === "/users/ssr" ? " bg-red-200" : ""
+                }
+              >
+                ssr
+              </a>
             </Link>
           </li>
         </ul>

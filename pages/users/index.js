@@ -14,6 +14,7 @@ export default function Page() {
   return (
     <Layout>
       <div>사용자 목록 페이지</div>
+      {0 === users.length ? <div>로딩중...</div> : null}
       {users.map((user) => {
         console.log(user);
         return (

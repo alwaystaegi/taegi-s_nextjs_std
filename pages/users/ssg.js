@@ -21,7 +21,7 @@ export default function Page(props) {
     </Layout>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await axios.get("https://jsonplaceholder.typicode.com/users");
   console.log(res.data);
   return { props: { users: res.data } };
