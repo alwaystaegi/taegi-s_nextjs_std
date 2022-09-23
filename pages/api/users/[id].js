@@ -4,8 +4,7 @@ export default function handler(
   req,
   res /*//!req res== props와 같은 인자지만 받는 요소가 다름 */
 ) {
-  console.log(req.query.id[0]);
-  console.log(req.query.id[1]);
+  console.log(req.query.id);
   //
 
   res.status(500).json({ ok: true, message: "GET CALL" });
