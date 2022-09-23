@@ -5,9 +5,8 @@ const 원본PW = "1234";
 
 export default function handler(req, res) {
   const { id, pw } = req.body;
-  const red = axios.get("https://geolocation-db.com/json/").then((red) => {
-    console.log("접속IP == ", red.data.IPv4);
-  });
+  const red = axios.get("https://geolocation-db.com/json/").then((red) => {});
+  console.log("접속IP == ", red.data.IPv4);
   if ("POST" !== req.method) {
     return res
       .status(405)
