@@ -1,9 +1,13 @@
+import axios from "axios";
+
 const 원본ID = "At";
 const 원본PW = "1234";
 
 export default function handler(req, res) {
   const { id, pw } = req.body;
-  console.log("방금 내가 찍은거.... ㅠㅜㅠ");
+  const red = axios.get("https://geolocation-db.com/json/").then((red) => {
+    console.log("접속IP == ", red.data.IPv4);
+  });
   if ("POST" !== req.method) {
     return res
       .status(405)
