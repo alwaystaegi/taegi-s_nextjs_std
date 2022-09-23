@@ -13,7 +13,7 @@ export default function Page() {
   console.log(users);
   return (
     <Layout>
-      <div>하하하 사용자 목록 페이지</div>
+      <div>사용자 목록 페이지</div>
       {0 === users.length ? <div>로딩중...</div> : null}
       {users.map((user) => {
         console.log(user);

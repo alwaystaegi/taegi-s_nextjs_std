@@ -3,6 +3,7 @@ const 원본PW = "1234";
 
 export default function handler(req, res) {
   const { id, pw } = req.body;
+  console.log("방금 내가 찍은거.... ㅠㅜㅠ");
   if ("POST" !== req.method) {
     return res
       .status(405)
